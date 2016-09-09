@@ -40,14 +40,10 @@ private class FontLoader {
         let bundle = NSBundle(forClass: FontLoader.self)
         let fileExtension = "ttf"
         
-        let docsPath = bundle.resourcePath! + "/Resources";
-        let fileManager = NSFileManager.defaultManager()
-        
-        let docsArray = try! fileManager.contentsOfDirectoryAtPath(docsPath)
-        
-        print(docsArray)
-        
-        let fontURL = bundle.URLForResource(name, withExtension: fileExtension)!
+        let baseFolderPath = bundle.resourcePath! + "/MaterialDesignIconFont.bundle";
+        let basePath = baseFolderPath as NSString
+        let fontFilePath = basePath.stringByAppendingPathComponent(name + "." + fileExtension)
+        let fontURL = NSURL(fileURLWithPath: fontFilePath)
         
         let data = NSData(contentsOfURL: fontURL)
         let provider = CGDataProviderCreateWithCFData(data)
