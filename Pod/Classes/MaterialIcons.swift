@@ -23,7 +23,7 @@ public extension NSString {
 public extension UIFont {
     public static func materialIconOfSize(size: CGFloat) -> UIFont {
         var onceToken: dispatch_once_t = 0
-        let filename = "materialdesignicons-webfont"
+        let filename = "materialdesignicons"
         let fontname = "Material Design Icons"
         
         if UIFont.fontNamesForFamilyName(fontname).count == 0 {
