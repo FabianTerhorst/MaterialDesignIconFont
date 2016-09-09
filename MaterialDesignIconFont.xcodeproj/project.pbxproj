@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		BD7822891D82BAD6001D689A /* MaterialDesignIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = BD7822881D82BAD6001D689A /* MaterialDesignIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD7822971D82BC16001D689A /* MaterialDesignIconFont.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BD7822961D82BC16001D689A /* MaterialDesignIconFont.podspec */; };
-		BDB75EB41D82CF700052B323 /* materialdesignicons-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDB75EB31D82CF700052B323 /* materialdesignicons-webfont.ttf */; };
 		BDB75EB71D82CF770052B323 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB75EB51D82CF770052B323 /* Font.swift */; };
 		BDB75EB81D82CF770052B323 /* MaterialIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB75EB61D82CF770052B323 /* MaterialIcons.swift */; };
+		BDB75EBA1D82D2320052B323 /* materialdesignicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDB75EB91D82D2320052B323 /* materialdesignicons.ttf */; };
+		BDB75EBE1D82D5720052B323 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BDB75EBD1D82D5720052B323 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +20,10 @@
 		BD7822881D82BAD6001D689A /* MaterialDesignIconFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaterialDesignIconFont.h; sourceTree = "<group>"; };
 		BD78228A1D82BAD6001D689A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD7822961D82BC16001D689A /* MaterialDesignIconFont.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MaterialDesignIconFont.podspec; sourceTree = SOURCE_ROOT; };
-		BDB75EB31D82CF700052B323 /* materialdesignicons-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "materialdesignicons-webfont.ttf"; path = "Pod/Assets/materialdesignicons-webfont.ttf"; sourceTree = SOURCE_ROOT; };
 		BDB75EB51D82CF770052B323 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Font.swift; path = Pod/Classes/Font.swift; sourceTree = SOURCE_ROOT; };
 		BDB75EB61D82CF770052B323 /* MaterialIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaterialIcons.swift; path = Pod/Classes/MaterialIcons.swift; sourceTree = SOURCE_ROOT; };
+		BDB75EB91D82D2320052B323 /* materialdesignicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = materialdesignicons.ttf; path = Pod/Assets/materialdesignicons.ttf; sourceTree = SOURCE_ROOT; };
+		BDB75EBD1D82D5720052B323 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +56,10 @@
 		BD7822871D82BAD6001D689A /* MaterialDesignIconFont */ = {
 			isa = PBXGroup;
 			children = (
+				BDB75EBD1D82D5720052B323 /* LICENSE */,
+				BDB75EB91D82D2320052B323 /* materialdesignicons.ttf */,
 				BDB75EB51D82CF770052B323 /* Font.swift */,
 				BDB75EB61D82CF770052B323 /* MaterialIcons.swift */,
-				BDB75EB31D82CF700052B323 /* materialdesignicons-webfont.ttf */,
 				BD7822881D82BAD6001D689A /* MaterialDesignIconFont.h */,
 				BD78228A1D82BAD6001D689A /* Info.plist */,
 				BD7822961D82BC16001D689A /* MaterialDesignIconFont.podspec */,
@@ -132,7 +135,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDB75EB41D82CF700052B323 /* materialdesignicons-webfont.ttf in Resources */,
+				BDB75EBE1D82D5720052B323 /* LICENSE in Resources */,
+				BDB75EBA1D82D2320052B323 /* materialdesignicons.ttf in Resources */,
 				BD7822971D82BC16001D689A /* MaterialDesignIconFont.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
