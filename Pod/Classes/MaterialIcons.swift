@@ -40,6 +40,13 @@ private class FontLoader {
         let bundle = NSBundle(forClass: FontLoader.self)
         let fileExtension = "ttf"
         
+        let docsPath = bundle.resourcePath! + "/Resources";
+        let fileManager = NSFileManager.defaultManager()
+        
+        let docsArray = try! fileManager.contentsOfDirectoryAtPath(docsPath)
+        
+        print(docsArray)
+        
         let fontURL = bundle.URLForResource(name, withExtension: fileExtension)!
         
         let data = NSData(contentsOfURL: fontURL)
