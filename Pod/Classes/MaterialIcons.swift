@@ -22,21 +22,21 @@ public extension NSString {
 
 public extension UIFont {
     public static func materialIconOfSize(_ size: CGFloat) -> UIFont {
-        var onceToken: Int = 0
-        let filename = "materialdesignicons"
+        //var onceToken: Int = 0
+        //let filename = "materialdesignicons"
         let fontname = "Material Design Icons"
         
-        if UIFont.fontNames(forFamilyName: fontname).count == 0 {
-            dispatch_once(&onceToken, { () -> Void in
-                FontLoader.loadFont(filename)
-            })
-        }
+        //if UIFont.fontNames(forFamilyName: fontname).count == 0 {
+            //dispatch_once(&onceToken, { () -> Void in
+            //    FontLoader.loadFont(filename)
+            //})
+        //}
         return UIFont(name: fontname, size: size)!
     }
 }
 
-private class FontLoader {
-    class func loadFont(_ name: String) {
+public class FontLoader {
+    class func loadFont(_ name: String = "materialdesignicons") {
         let bundle = Bundle(for: FontLoader.self)
         let fileExtension = "ttf"
         
