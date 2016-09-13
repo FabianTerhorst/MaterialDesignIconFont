@@ -9,24 +9,24 @@
 import UIKit
 
 public extension String {
-    public static func materialIcon(font: MaterialDesignIconFont) -> String {
+    public static func materialIcon(_ font: MaterialDesignIconFont) -> String {
         return IconFont.codes[font.rawValue]
     }
 }
 
 public extension NSString {
-    public static func materialIcon(font: MaterialDesignIconFont) -> NSString {
+    public static func materialIcon(_ font: MaterialDesignIconFont) -> NSString {
         return NSString(string: String.materialIcon(font))
     }
 }
 
 public extension UIFont {
-    public static func materialIconOfSize(size: CGFloat) -> UIFont {
-        var onceToken: dispatch_once_t = 0
+    public static func materialIconOfSize(_ size: CGFloat) -> UIFont {
+        var onceToken: Int = 0
         let filename = "materialdesignicons"
         let fontname = "Material Design Icons"
         
-        if UIFont.fontNamesForFamilyName(fontname).count == 0 {
+        if UIFont.fontNames(forFamilyName: fontname).count == 0 {
             dispatch_once(&onceToken, { () -> Void in
                 FontLoader.loadFont(filename)
             })
@@ -36,24 +36,24 @@ public extension UIFont {
 }
 
 private class FontLoader {
-    class func loadFont(name: String) {
-        let bundle = NSBundle(forClass: FontLoader.self)
+    class func loadFont(_ name: String) {
+        let bundle = Bundle(for: FontLoader.self)
         let fileExtension = "ttf"
         
         let baseFolderPath = bundle.resourcePath! + "/MaterialDesignIconFont.bundle";
         let basePath = baseFolderPath as NSString
-        let fontFilePath = basePath.stringByAppendingPathComponent(name + "." + fileExtension)
-        let fontURL = NSURL(fileURLWithPath: fontFilePath)
+        let fontFilePath = basePath.appendingPathComponent(name + "." + fileExtension)
+        let fontURL = URL(fileURLWithPath: fontFilePath)
         
-        let data = NSData(contentsOfURL: fontURL)
-        let provider = CGDataProviderCreateWithCFData(data)
-        let font = CGFontCreateWithDataProvider(provider)!
+        let data = try? Data(contentsOf: fontURL)
+        let provider = CGDataProvider(data: data as! CFData)
+        let font = CGFont(provider!)
         
         var error: Unmanaged<CFError>?
         if !CTFontManagerRegisterGraphicsFont(font, &error) {
-            let errorDescription: CFStringRef = CFErrorCopyDescription(error!.takeUnretainedValue())
+            let errorDescription: CFString = CFErrorCopyDescription(error!.takeUnretainedValue())
             let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
-            NSException(name: NSInternalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
+            NSException(name: NSExceptionName.internalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
         }
     }
 }
