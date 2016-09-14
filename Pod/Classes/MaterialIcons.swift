@@ -36,7 +36,7 @@ public extension UIFont {
 }
 
 public class FontLoader {
-    class func loadFont(_ name: String = "materialdesignicons") {
+    public class func loadFont(_ name: String = "materialdesignicons") {
         let bundle = Bundle(for: FontLoader.self)
         let fileExtension = "ttf"
         
