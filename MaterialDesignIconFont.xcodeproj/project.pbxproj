@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD2A8DDB20D9381200EAF227 /* MeteoconcsFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2A8DDA20D9381200EAF227 /* MeteoconcsFont.swift */; };
+		BD2A8DDD20D93CBE00EAF227 /* meteocons-v1.1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD2A8DDC20D93CBE00EAF227 /* meteocons-v1.1.1.ttf */; };
 		BD7822891D82BAD6001D689A /* MaterialDesignIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = BD7822881D82BAD6001D689A /* MaterialDesignIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD7822971D82BC16001D689A /* MaterialDesignIconFont.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BD7822961D82BC16001D689A /* MaterialDesignIconFont.podspec */; };
 		BDB75EB71D82CF770052B323 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB75EB51D82CF770052B323 /* Font.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD2A8DDA20D9381200EAF227 /* MeteoconcsFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeteoconcsFont.swift; path = Pod/Classes/MeteoconcsFont.swift; sourceTree = SOURCE_ROOT; };
+		BD2A8DDC20D93CBE00EAF227 /* meteocons-v1.1.1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "meteocons-v1.1.1.ttf"; path = "Pod/Assets/meteocons-v1.1.1.ttf"; sourceTree = SOURCE_ROOT; };
 		BD7822851D82BAD6001D689A /* MaterialDesignIconFont.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialDesignIconFont.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD7822881D82BAD6001D689A /* MaterialDesignIconFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaterialDesignIconFont.h; sourceTree = "<group>"; };
 		BD78228A1D82BAD6001D689A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 		BD7822871D82BAD6001D689A /* MaterialDesignIconFont */ = {
 			isa = PBXGroup;
 			children = (
+				BD2A8DDC20D93CBE00EAF227 /* meteocons-v1.1.1.ttf */,
 				BDB75EBD1D82D5720052B323 /* LICENSE */,
 				BDB75EB91D82D2320052B323 /* materialdesignicons.ttf */,
 				BDB75EB51D82CF770052B323 /* Font.swift */,
@@ -63,6 +68,7 @@
 				BD7822881D82BAD6001D689A /* MaterialDesignIconFont.h */,
 				BD78228A1D82BAD6001D689A /* Info.plist */,
 				BD7822961D82BC16001D689A /* MaterialDesignIconFont.podspec */,
+				BD2A8DDA20D9381200EAF227 /* MeteoconcsFont.swift */,
 			);
 			path = MaterialDesignIconFont;
 			sourceTree = "<group>";
@@ -105,12 +111,12 @@
 		BD78227C1D82BAD6001D689A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = everHome;
 				TargetAttributes = {
 					BD7822841D82BAD6001D689A = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -139,6 +145,7 @@
 				BDB75EBE1D82D5720052B323 /* LICENSE in Resources */,
 				BDB75EBA1D82D2320052B323 /* materialdesignicons.ttf in Resources */,
 				BD7822971D82BC16001D689A /* MaterialDesignIconFont.podspec in Resources */,
+				BD2A8DDD20D93CBE00EAF227 /* meteocons-v1.1.1.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDB75EB71D82CF770052B323 /* Font.swift in Sources */,
+				BD2A8DDB20D9381200EAF227 /* MeteoconcsFont.swift in Sources */,
 				BDB75EB81D82CF770052B323 /* MaterialIcons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,13 +174,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -215,13 +233,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -241,6 +269,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -253,6 +282,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -265,7 +295,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -274,6 +305,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -285,7 +317,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.everHome.MaterialDesignIconFont;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -33,6 +33,18 @@ public extension UIFont {
         //}
         return UIFont(name: fontname, size: size)!
     }
+    public static func meteoconcsIconOfSize(_ size: CGFloat) -> UIFont {
+        //var onceToken: Int = 0
+        //let filename = "materialdesignicons"
+        let fontname = "MeteoconsRegular"
+        
+        //if UIFont.fontNames(forFamilyName: fontname).count == 0 {
+        //dispatch_once(&onceToken, { () -> Void in
+        //    FontLoader.loadFont(filename)
+        //})
+        //}
+        return UIFont(name: fontname, size: size)!
+    }
 }
 
 public class FontLoader {
@@ -47,13 +59,13 @@ public class FontLoader {
         
         let data = try? Data(contentsOf: fontURL)
         if let data = data as CFData? {
-            let provider = CGDataProvider(data: data)
-            if let font = CGFont(provider!) {
+            if let provider = CGDataProvider(data: data) {
+                let font = CGFont(provider)
                 var error: Unmanaged<CFError>?
-                if !CTFontManagerRegisterGraphicsFont(font, &error) {
+                if !CTFontManagerRegisterGraphicsFont(font!, &error) {
                     let errorDescription: CFString = CFErrorCopyDescription(error!.takeUnretainedValue())
                     let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
-                    NSException(name: NSExceptionName.internalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
+                        NSException(name: NSExceptionName.internalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
                 }
             }
         }
