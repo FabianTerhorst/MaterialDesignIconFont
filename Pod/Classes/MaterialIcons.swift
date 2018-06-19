@@ -12,11 +12,17 @@ public extension String {
     public static func materialIcon(_ font: MaterialDesignIconFont) -> String {
         return IconFont.codes[font.rawValue]
     }
+    public static func meteoconIcon(_ font: MeteoconcsIconFont) -> String {
+        return MeteoconcsIconFontCodes.codes[font.rawValue]
+    }
 }
 
 public extension NSString {
     public static func materialIcon(_ font: MaterialDesignIconFont) -> NSString {
         return NSString(string: String.materialIcon(font))
+    }
+    public static func meteoconIcon(_ font: MeteoconcsIconFont) -> NSString {
+        return NSString(string: String.meteoconIcon(font))
     }
 }
 
