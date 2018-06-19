@@ -13,7 +13,7 @@ public extension String {
         return IconFont.codes[font.rawValue]
     }
     public static func meteoconIcon(_ font: MeteoconcsIconFont) -> String {
-        return MeteoconcsIconFontCodes.codes[font.rawValue]
+        return MeteoconcsIconFontCodes[font.rawValue]
     }
 }
 
