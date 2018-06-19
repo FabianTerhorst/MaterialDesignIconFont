@@ -42,7 +42,7 @@ public extension UIFont {
     public static func meteoconcsIconOfSize(_ size: CGFloat) -> UIFont {
         //var onceToken: Int = 0
         //let filename = "materialdesignicons"
-        let fontname = "MeteoconsRegular"
+        let fontname = "Meteocons"
         
         //if UIFont.fontNames(forFamilyName: fontname).count == 0 {
         //dispatch_once(&onceToken, { () -> Void in
