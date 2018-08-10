@@ -27,7 +27,7 @@ public extension NSString {
 }
 
 public extension UIFont {
-    public static func materialIconOfSize(_ size: CGFloat) -> UIFont {
+    public static func materialIconOfSize(_ size: CGFloat) -> UIFont? {
         //var onceToken: Int = 0
         //let filename = "materialdesignicons"
         let fontname = "Material Design Icons"
@@ -37,9 +37,9 @@ public extension UIFont {
             //    FontLoader.loadFont(filename)
             //})
         //}
-        return UIFont(name: fontname, size: size)!
+        return UIFont(name: fontname, size: size)
     }
-    public static func meteoconcsIconOfSize(_ size: CGFloat) -> UIFont {
+    public static func meteoconcsIconOfSize(_ size: CGFloat) -> UIFont? {
         //var onceToken: Int = 0
         //let filename = "materialdesignicons"
         let fontname = "Meteocons"
@@ -49,12 +49,12 @@ public extension UIFont {
         //    FontLoader.loadFont(filename)
         //})
         //}
-        return UIFont(name: fontname, size: size)!
+        return UIFont(name: fontname, size: size)
     }
 }
 
 public class FontLoader {
-    public class func loadFont(_ name: String = "materialdesignicons") {
+    public class func loadFont(_ name: String = "materialdesignicons") -> CGFont? {
         let bundle = Bundle(for: FontLoader.self)
         let fileExtension = "ttf"
         
@@ -65,15 +65,17 @@ public class FontLoader {
         
         let data = try? Data(contentsOf: fontURL)
         if let data = data as CFData? {
-            if let provider = CGDataProvider(data: data) {
-                let font = CGFont(provider)
+            if let provider = CGDataProvider(data: data), let font = CGFont(provider) {
                 var error: Unmanaged<CFError>?
-                if !CTFontManagerRegisterGraphicsFont(font!, &error) {
+                if !CTFontManagerRegisterGraphicsFont(font, &error) {
                     let errorDescription: CFString = CFErrorCopyDescription(error!.takeUnretainedValue())
-                    let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
-                        NSException(name: NSExceptionName.internalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
+                    print("font error", errorDescription)
+                    //let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
+                    //    NSException(name: NSExceptionName.internalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
                 }
+                return font
             }
         }
+        return nil
     }
 }
