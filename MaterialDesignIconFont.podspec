@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
 
     s.source_files = 'Sources/**'
     s.resource_bundles = {
-        'MaterialDesignIconFont' => ['Assets/*.ttf']
+        'MaterialDesignIconFont' => ['Sources/Assets/*.ttf']
     }
 end
