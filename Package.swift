@@ -10,7 +10,8 @@ let package = Package(
         .target(
             name: "MaterialDesignIconFont",
             dependencies: [],
-            path: "Sources"
+            path: "Sources",
+	    resources: [.process("Assets")])
         )
     ]
 )
