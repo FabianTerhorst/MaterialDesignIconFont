@@ -14,7 +14,11 @@ let package = Package(
             name: "MaterialDesignIconFont",
             dependencies: [],
             path: "Sources",
-	    resources: [.process("Assets")])
-        )
+	    resources: [
+		.process("Assets/materialdesignicons.ttf"),
+		.process("Assets/meteocons-v1.1.1.ttf")
+	    ]
+         )
+        ),
     ]
 )
