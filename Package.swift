@@ -18,7 +18,6 @@ let package = Package(
 		.process("Assets/materialdesignicons.ttf"),
 		.process("Assets/meteocons-v1.1.1.ttf")
 	    ]
-         )
         ),
     ]
 )
